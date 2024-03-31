@@ -25,4 +25,17 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.zzw</groupId>
+            <artifactId>iCache-autoconfigure</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zzw</groupId>
+            <artifactId>Api</artifactId>
+            <version>24.03.31</version>
+        </dependency>
+    </dependencies>
+
 </project>

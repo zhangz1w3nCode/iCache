@@ -1,18 +1,15 @@
 package com.zzw.iCache.demo.Provider.serviceImp;
 
-
-import com.zzw.iCache.Cache.Cache;
+import com.zzw.iCache.autoconfigure.annocation.iCache;
+import com.zzw.iCache.core.Cache.Cache;
 import com.zzw.iCache.demo.Api.Entity.ProductInfo;
-import com.zzw.iCache.RealCache.valueWrapper.ValueWrapper;
 import com.zzw.iCache.demo.Api.TestFacade;
-import com.zzw.iCache.annocation.iCache;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.stereotype.Component;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 import java.util.UUID;
 
 @Component
@@ -20,7 +17,7 @@ import java.util.UUID;
 @Slf4j
 public class testCacheImp implements TestFacade {
 
-    @iCache(name = "productInfoCache")
+    @iCache("productCache")
     Cache<ProductInfo> productInfoCache;
 
     @Override
@@ -44,10 +41,10 @@ public class testCacheImp implements TestFacade {
         return productInfo;
     }
 
-    @Override
-    public List<ValueWrapper<ProductInfo>> getAllValues() {
-        List<ValueWrapper<ProductInfo>> valueList = productInfoCache.getValues();
-        log.info("valueList:{}",valueList);
-        return valueList;
-    }
+//    @Override
+//    public List<ValueWrapper<ProductInfo>> getAllValues() {
+//        List<ValueWrapper<ProductInfo>> valueList = productInfoCache.getValues();
+//        log.info("valueList:{}",valueList);
+//        return valueList;
+//    }
 }
