@@ -8,6 +8,7 @@ import com.zzw.iCache.core.CacheListener.CacheListener;
 import com.zzw.iCache.core.RealCache.RealCache;
 
 import java.util.List;
+import java.util.Set;
 
 
 /**
@@ -50,6 +51,7 @@ public interface CacheManager {
 
 
     CacheConfig getCacheConfig(String name);
+
 //
 //    /**
 //     *  是否包含某个缓存
@@ -58,11 +60,11 @@ public interface CacheManager {
 //     */
 //    boolean containsCache(String name);
 //
-//    /**
-//     * 获取所有的缓存名称
-//     * @return
-//     */
-//    Set<String> getCacheNames();
+    /**
+     * 获取所有的缓存名称
+     * @return
+     */
+    Set<String> getCacheNames();
 //
 //    /**
 //     * 注册刷新器到缓存管理器中统一管理

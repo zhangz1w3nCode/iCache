@@ -3,7 +3,7 @@ package com.zzw.iCache.autoconfigure.processor;
 import com.zzw.iCache.autoconfigure.annocation.iCache;
 import com.zzw.iCache.autoconfigure.properties.RealCacheProperties;
 import com.zzw.iCache.autoconfigure.properties.RealProperties;
-import com.zzw.iCache.core.Cache.Cache;
+import com.zzw.iCache.core.Cache.*;
 import com.zzw.iCache.core.CacheFilter.CacheFilter;
 import com.zzw.iCache.core.CacheListener.CacheListener;
 import com.zzw.iCache.core.CacheManager.CacheManager;

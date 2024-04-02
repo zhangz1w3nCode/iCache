@@ -14,6 +14,7 @@ import com.zzw.iCache.core.RealCache.RealCache;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * @Author: zhangyang
@@ -116,5 +117,15 @@ public class CacheManagerImp implements CacheManager {
     @Override
     public CacheConfig getCacheConfig(String name) {
         return cacheConfigMap.get(name);
+    }
+
+    /**
+     * 获取所有的缓存名称
+     *
+     * @return
+     */
+    @Override
+    public Set<String> getCacheNames() {
+        return realCacheMap.keySet();
     }
 }
