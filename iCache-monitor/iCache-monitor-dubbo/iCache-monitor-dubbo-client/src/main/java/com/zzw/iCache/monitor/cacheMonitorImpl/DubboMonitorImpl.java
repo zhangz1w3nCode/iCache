@@ -1,15 +1,12 @@
 package com.zzw.iCache.monitor.cacheMonitorImpl;
 
 import com.alibaba.fastjson.JSON;
-import com.zzw.iCache.autoconfigure.annocation.iCache;
-import com.zzw.iCache.core.Cache.Cache;
 import com.zzw.iCache.core.CacheConfig.CacheConfig;
 import com.zzw.iCache.core.CacheManager.CacheManager;
 import com.zzw.iCache.core.RealCache.RealCache;
 import com.zzw.iCache.core.RealCache.valueWrapper.ValueWrapper;
 import com.zzw.iCache.monitor.CacheMonitor;
 import com.zzw.iCache.monitor.dto.CacheInfo;
-import com.zzw.iCache.monitor.dto.ProductInfo;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -29,9 +26,6 @@ public class DubboMonitorImpl implements CacheMonitor {
 
     @Autowired
     private CacheManager cacheManager;
-
-    @iCache("productCache")
-    Cache<ProductInfo> productInfoCache;
 
     /**
      * cacheName:定义缓存名称：比如商品缓存
@@ -87,7 +81,6 @@ public class DubboMonitorImpl implements CacheMonitor {
      */
     @Override
     public String putProductCache(String skuSn, String productName, String productDesc) {
-        productInfoCache.put(skuSn,new ProductInfo(skuSn,productName,productDesc));
         return skuSn;
     }
 
