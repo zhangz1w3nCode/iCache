@@ -28,7 +28,9 @@
        
         9⃣️️ Sharding JDBC(分库分表)
        
-        9⃣️ Apollo(核心参数集中管理、热更新配置)
+        9⃣️ Apollo(核心参数集中管理(zk地址、服务端口号等)、热更新配置)
+       
+        9⃣️ GitLab(代码仓库托管)
 ### 📌 Content 
 - [ ] 整体架构
     - [ ] [Chapter1.架构图](https://github.com/zhangz1w3nCode/RedisNote/blob/main/%E5%BC%95%E8%A8%80/%E7%AC%AC1%E7%AB%A0-%E5%BC%95%E8%A8%80%F0%9F%92%AC.md)
