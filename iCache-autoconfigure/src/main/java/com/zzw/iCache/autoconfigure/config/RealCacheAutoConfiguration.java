@@ -4,6 +4,7 @@ import com.zzw.iCache.autoconfigure.processor.RealCacheBeanPostProcessor;
 import com.zzw.iCache.autoconfigure.properties.RealProperties;
 import com.zzw.iCache.core.CacheManager.CacheManager;
 import com.zzw.iCache.core.CacheManager.implement.CacheManagerImp;
+import org.apache.dubbo.config.spring.context.annotation.DubboComponentScan;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -19,6 +20,7 @@ import org.springframework.core.annotation.Order;
 /** 保证优先加载，防止出现找不到缓存对象的问题 */
 @Order(-999999)
 @Configuration
+@DubboComponentScan(basePackages = "com.zzw")
 //@AutoConfigureAfter(RealCacheBeanConfig.class)
 @Import(RealCacheBeanPostProcessor.class)
 @EnableConfigurationProperties({RealProperties.class})

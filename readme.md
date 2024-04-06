@@ -6,13 +6,13 @@
         2️⃣ iCache····
 
 ### 📌 Technology stack
-        1️⃣ Java(反射、SPI、Annotation)
+        1️⃣ Java(反射、SPI、Annotation、线程池())
         
         2️⃣ Caffeine
         
         3️⃣ SpringBoot
         
-        4️⃣ Spring(BeanPostProcessor、AOP)
+        4️⃣ Spring(BeanPostProcessor、AOP、定时任务)
         
         5️⃣ 设计模式(工厂模式、门面模式、模版模式、适配器模式、装饰者模式、单例模式) 
        
@@ -26,7 +26,7 @@
        
         9⃣️️ MySQL(持久化快照信息)
        
-        9⃣️️ Sharding JDBC(分库分表)
+        9⃣️️ Sharding JDBC(对存储快照数据的表 分库分表 降低单表压力)
        
         9⃣️ Apollo(核心参数集中管理(zk地址、服务端口号等)、热更新配置)
        

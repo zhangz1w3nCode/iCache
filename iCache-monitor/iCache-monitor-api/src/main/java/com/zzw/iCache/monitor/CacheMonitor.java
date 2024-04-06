@@ -18,10 +18,6 @@ public interface CacheMonitor {
      */
      Object getCache(String cacheName,String key);
 
-     /**
-      * 模拟缓存存入
-     */
-     String putProductCache(String skuSn,String productName,String productDesc);
 
      /**
      查询某个缓存的所有key

@@ -72,17 +72,6 @@ public class DubboMonitorImpl implements CacheMonitor {
         return cacheInfo;
     }
 
-    /**
-     * 模拟缓存存入
-     *
-     * @param skuSn
-     * @param productName
-     * @param productDesc
-     */
-    @Override
-    public String putProductCache(String skuSn, String productName, String productDesc) {
-        return skuSn;
-    }
 
     /**
      * 查询某个缓存的所有key
