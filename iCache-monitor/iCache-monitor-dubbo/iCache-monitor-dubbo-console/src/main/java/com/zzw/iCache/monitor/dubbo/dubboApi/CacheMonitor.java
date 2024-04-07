@@ -1,8 +1,6 @@
-package com.zzw.iCache.monitor;
+package com.zzw.iCache.monitor.dubbo.dubboApi;
 
 import java.util.Set;
-
-
 
 
 /**
@@ -17,6 +15,11 @@ public interface CacheMonitor {
       key：需要查询缓存的key
      */
      Object getCache(String cacheName,String key);
+
+     /**
+      * 模拟缓存存入
+     */
+     String putProductCache(String skuSn,String productName,String productDesc);
 
      /**
      查询某个缓存的所有key
