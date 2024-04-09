@@ -2,8 +2,11 @@ package com.zzw.iCache.autoconfigure.properties;
 
 
 
+import com.alibaba.fastjson.JSON;
 import com.zzw.iCache.core.CacheConfig.CacheConfig;
 import com.zzw.iCache.core.CacheConstant.CacheConstant;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 import java.util.HashMap;
@@ -11,10 +14,7 @@ import java.util.Map;
 
 /**
  * 缓存配置信息
- * @author qiaolin
- * @version $Id:  SeaDogCacheProperties.java,v 0.1 2020年06月06日 14:07 $Exp
  */
-
 public class RealCacheProperties {
 
 
@@ -86,6 +86,9 @@ public class RealCacheProperties {
         if(!attachments.isEmpty()){
             cacheConfig.setAttachments(attachments);
         }
+
+        System.out.println("通过资源对象创建配置对象成功"+ JSON.toJSONString(cacheConfig));
+
         return cacheConfig;
     }
 

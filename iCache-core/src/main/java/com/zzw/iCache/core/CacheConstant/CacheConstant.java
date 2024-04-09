@@ -5,7 +5,7 @@ package com.zzw.iCache.core.CacheConstant;
  */
 public interface CacheConstant {
 
-    String REAL_CACHE = "realcache";
+    String REAL_CACHE = "icache";
 
     String CACHE_TYPE_CAFFEINE = "CAFFEINE";
 

@@ -8,9 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * SeaDog 配置类
- * @author qiaolin
- * @version $Id:  SeaDogProperties.java,v 0.1 2020年06月06日 14:05 $Exp
+ * 配置类
  */
 
 @ConfigurationProperties(prefix = CacheConstant.REAL_CACHE)

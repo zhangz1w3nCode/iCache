@@ -9,9 +9,6 @@ import java.util.Set;
  * 缓存监控接口
  */
 public interface CacheMonitor {
-
-
-
     /**
       cacheName:定义缓存名称：比如商品缓存
       key：需要查询缓存的key

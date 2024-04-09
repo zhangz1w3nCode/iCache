@@ -51,8 +51,11 @@ public class CaffeineCache<V> implements RealCache<V>, CacheConstant {
             builder.maximumSize(cacheConfig.getMaxSize());
         }
 
+
         //构建
         cache = builder.build();
+
+        System.out.println("成功构建一个CaffeineCache"+cacheConfig.toString());
     }
 
     @Override
