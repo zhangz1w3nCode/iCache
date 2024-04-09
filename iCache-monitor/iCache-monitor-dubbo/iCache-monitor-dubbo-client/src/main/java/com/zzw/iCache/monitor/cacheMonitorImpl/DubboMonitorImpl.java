@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
  *
  */
 @Component
-@Service(version = "1.0.0")
+@Service
 public class DubboMonitorImpl implements CacheMonitor {
 
     @Autowired
