@@ -24,6 +24,7 @@
         <module>iCache-autoconfigure</module>
         <module>iCache-starter</module>
         <module>iCache-monitor</module>
+        <module>iCache-schedule</module>
     </modules>
 
 

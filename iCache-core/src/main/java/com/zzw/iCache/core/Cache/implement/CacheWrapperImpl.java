@@ -51,4 +51,9 @@ public class CacheWrapperImpl<V> implements Cache<V> {
 
         return valueWrapperList;
     }
+
+    @Override
+    public String getName() {
+        return realCache.getName();
+    }
 }

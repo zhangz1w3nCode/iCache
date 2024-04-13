@@ -1,0 +1,5 @@
+# AutoConfig
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.zzw.iCache.autoconfigure.config.RealCacheAutoConfiguration,\
+com.zzw.iCache.autoconfigure.config.ScheduleProtectAutoConfiguration,\
+com.zzw.iCache.autoconfigure.config.RealCacheScheduleAutoConfiguration

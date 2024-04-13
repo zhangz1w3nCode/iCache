@@ -30,4 +30,7 @@ public interface CacheMonitor {
      查询某个缓存的数据数量
      */
     long cacheSize(String cacheName);
+
+
+    void refreshCache(String cacheName, String refreshName);
 }

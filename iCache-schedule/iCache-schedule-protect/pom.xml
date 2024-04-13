@@ -2,15 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+    
     <parent>
         <groupId>com.zzw</groupId>
-        <artifactId>iCache</artifactId>
+        <artifactId>iCache-schedule</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>iCache-autoconfigure</artifactId>
-    <version>24.04.02</version>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>iCache-schedule-protect</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -19,23 +21,11 @@
     </properties>
 
     <dependencies>
-
         <dependency>
-            <groupId>com.zzw</groupId>
-            <artifactId>iCache-core</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.zzw</groupId>
-            <artifactId>iCache-monitor-dubbo-client</artifactId>
-            <version>24.04.02</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.22</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.zzw</groupId>
@@ -43,14 +33,13 @@
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
-
         <dependency>
-            <groupId>com.zzw</groupId>
-            <artifactId>iCache-schedule-protect</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>3.7.1</version>
         </dependency>
-
     </dependencies>
+
+
 
 </project>

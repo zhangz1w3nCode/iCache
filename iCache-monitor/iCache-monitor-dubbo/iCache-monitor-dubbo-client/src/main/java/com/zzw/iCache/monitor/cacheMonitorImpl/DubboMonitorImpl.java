@@ -27,6 +27,8 @@ public class DubboMonitorImpl implements CacheMonitor {
     @Autowired
     private CacheManager cacheManager;
 
+    private static final String REFRESH_ALL = "refresh_all";
+
     /**
      * cacheName:定义缓存名称：比如商品缓存
      * key：需要查询缓存的key
@@ -113,5 +115,30 @@ public class DubboMonitorImpl implements CacheMonitor {
         }
 
         return cache.size();
+    }
+
+    @Override
+    public void refreshCache(String cacheName, String refreshName) {
+        // 如果是 refresh_all，则调用所有的刷新器
+        if(REFRESH_ALL.equalsIgnoreCase(refreshName)){
+            Set<String> refreshNames = cacheManager.getRefreshNames(cacheName);
+            for (String name : refreshNames) {
+                try {
+                    cacheManager.refreshCache(cacheName, name);
+                } catch (Exception e) {
+                    //log.info("调用刷新器失败 cacheName:{}, refresh:{}", cacheName, name, e);
+                    System.out.println("调用刷新器失败"+"---"+cacheName+"---"+name);
+                    System.out.println(e);
+                }
+            }
+        } else {
+            // 是具体刷新器时，直接调用
+            try {
+                cacheManager.refreshCache(cacheName, refreshName);
+            } catch (Exception e) {
+                System.out.println("调用刷新器失败"+"---"+cacheName+"---"+refreshName);
+                System.out.println(e);
+            }
+        }
     }
 }

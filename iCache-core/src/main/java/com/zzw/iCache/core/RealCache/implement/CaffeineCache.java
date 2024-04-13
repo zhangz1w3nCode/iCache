@@ -89,4 +89,9 @@ public class CaffeineCache<V> implements RealCache<V>, CacheConstant {
     public long size() {
         return cache.estimatedSize();
     }
+
+    @Override
+    public String getName() {
+        return name;
+    }
 }

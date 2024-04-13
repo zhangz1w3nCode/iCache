@@ -20,4 +20,6 @@ public interface RealCache<V>{
     Set<String> getKeys();
 
     long size();
+
+    String getName();
 }

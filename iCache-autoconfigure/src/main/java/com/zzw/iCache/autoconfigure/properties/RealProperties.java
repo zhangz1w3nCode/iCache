@@ -19,15 +19,15 @@ public class RealProperties {
      */
     private Map<String, RealCacheProperties> caches = new HashMap();
 
-//    /**
-//     *  缓存调度配置
-//     */
-//    private SeaDogScheduleProperties schedule = new SeaDogScheduleProperties();
-//
-//    /**
-//     *  快照配置
-//     */
-//    private SeaDogSnapshotProperties snapshot = new SeaDogSnapshotProperties();
+    /**
+     *  缓存调度配置
+     */
+    private SeaDogScheduleProperties schedule = new SeaDogScheduleProperties();
+
+    /**
+     *  快照配置
+     */
+    private SeaDogSnapshotProperties snapshot = new SeaDogSnapshotProperties();
 
 
 
@@ -39,19 +39,19 @@ public class RealProperties {
         this.caches = caches;
     }
 
-//    public SeaDogScheduleProperties getSchedule() {
-//        return schedule;
-//    }
-//
-//    public void setSchedule(SeaDogScheduleProperties schedule) {
-//        this.schedule = schedule;
-//    }
-//
-//    public SeaDogSnapshotProperties getSnapshot() {
-//        return snapshot;
-//    }
-//
-//    public void setSnapshot(SeaDogSnapshotProperties snapshot) {
-//        this.snapshot = snapshot;
-//    }
+    public SeaDogScheduleProperties getSchedule() {
+        return schedule;
+    }
+
+    public void setSchedule(SeaDogScheduleProperties schedule) {
+        this.schedule = schedule;
+    }
+
+    public SeaDogSnapshotProperties getSnapshot() {
+        return snapshot;
+    }
+
+    public void setSnapshot(SeaDogSnapshotProperties snapshot) {
+        this.snapshot = snapshot;
+    }
 }

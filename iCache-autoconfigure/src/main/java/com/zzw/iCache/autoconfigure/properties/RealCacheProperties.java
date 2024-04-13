@@ -28,10 +28,10 @@ public class RealCacheProperties {
      */
     private String type = CacheConstant.CACHE_TYPE_CAFFEINE;
 
-//    /**
-//     *  缓存刷新策略
-//     */
-//    private Map<String, SeaDogCacheRefreshProperties> refresh;
+    /**
+     *  缓存刷新策略
+     */
+    private Map<String, SeaDogCacheRefreshProperties> refresh;
 
     /**
      *  缓存对应的过滤器
@@ -108,13 +108,13 @@ public class RealCacheProperties {
         this.type = type;
     }
 
-//    public Map<String, SeaDogCacheRefreshProperties> getRefresh() {
-//        return refresh;
-//    }
-//
-//    public void setRefresh(Map<String, SeaDogCacheRefreshProperties> refresh) {
-//        this.refresh = refresh;
-//    }
+    public Map<String, SeaDogCacheRefreshProperties> getRefresh() {
+        return refresh;
+    }
+
+    public void setRefresh(Map<String, SeaDogCacheRefreshProperties> refresh) {
+        this.refresh = refresh;
+    }
 
     public String[] getFilter() {
         return filter;

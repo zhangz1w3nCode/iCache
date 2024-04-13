@@ -14,4 +14,6 @@ public interface Cache<V>{
     void put(String key, V value);
 
     List<ValueWrapper<V>> getValues();
+
+    String getName();
 }

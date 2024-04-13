@@ -11,10 +11,7 @@ import com.zzw.iCache.core.CacheManager.CacheManager;
 import com.zzw.iCache.core.CacheRefresher.CacheRefresh;
 import com.zzw.iCache.core.RealCache.RealCache;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @Author: zhangyang
@@ -119,6 +116,19 @@ public class CacheManagerImp implements CacheManager {
         return cacheConfigMap.get(name);
     }
 
+
+
+    /**
+     * 是否包含某个缓存
+     *
+     * @param name 缓存名称
+     * @return
+     */
+    @Override
+    public boolean containsCache(String name) {
+        return false;
+    }
+
     /**
      * 获取所有的缓存名称
      *
@@ -127,5 +137,37 @@ public class CacheManagerImp implements CacheManager {
     @Override
     public Set<String> getCacheNames() {
         return realCacheMap.keySet();
+    }
+
+    @Override
+    public void registryRefresh(String cacheName, String refreshName, CacheRefresh refresh) {
+        Map<String, CacheRefresh> refreshMap = refreshMaps.get(cacheName);
+        if(refreshMap == null){
+            refreshMap = new HashMap<>(2);
+            refreshMaps.put(cacheName, refreshMap);
+        }
+        refreshMap.put(refreshName, refresh);
+    }
+
+    @Override
+    public Set<String> getRefreshNames(String cacheName) {
+
+        Map<String, CacheRefresh> refreshMap = refreshMaps.get(cacheName);
+
+        if(refreshMap != null){
+            return refreshMap.keySet();
+        }
+        return Collections.EMPTY_SET;
+    }
+
+
+    // <缓存名-<刷新的资源名称-刷新器>>
+    @Override
+    public void refreshCache(String cacheName, String refreshName) {
+        Map<String, CacheRefresh> refreshMap = refreshMaps.get(cacheName);
+        if(refreshMap != null && refreshMap.get(refreshName) != null){
+            Cache cache = facadeCache.get(cacheName);
+            refreshMap.get(refreshName).refresh(cache);
+        }
     }
 }
