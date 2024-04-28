@@ -8,8 +8,14 @@ import com.zzw.iCache.core.RealCache.RealCache;
 import com.zzw.iCache.core.RealCache.valueWrapper.ValueWrapper;
 import org.apache.dubbo.common.utils.CollectionUtils;
 
+import java.lang.management.ManagementFactory;
+import java.lang.management.MemoryMXBean;
+import java.lang.management.MemoryUsage;
+import java.math.BigDecimal;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
+
+import java.text.DecimalFormat;
 
 /**
  * @Author: zhangyang
@@ -94,4 +100,49 @@ public class CaffeineCache<V> implements RealCache<V>, CacheConstant {
     public String getName() {
         return name;
     }
+
+    @Override
+    public Double calculateMemoryUsage() {
+
+        // 计算缓存对象所占用的内存
+        long cacheSize =(cache.estimatedSize());
+
+        double totalSizeInMB = cacheSize * 1.0/ 1024.0/1024.0;
+        // 获取当前JVM占用的内存情况
+
+
+        MemoryMXBean memoryMXBean = ManagementFactory.getMemoryMXBean();
+        // 椎内存使用情况
+        MemoryUsage memoryUsage = memoryMXBean.getHeapMemoryUsage();
+
+        // 最大可用内存
+        long maxMemorySize = memoryUsage.getMax();
+        // 已使用的内存
+        long usedMemorySize = memoryUsage.getUsed();
+
+        double used = usedMemorySize * 1.0 / 1024.0 / 1024.0;
+        double max = maxMemorySize * 1.0 / 1024.0 / 1024.0;
+
+        System.err.println("已使用的内存(JVM):" + new DecimalFormat("#.#").format(usedMemorySize * 1.0 / 1024.0 / 1024.0) + "M");
+        System.err.println("最大可用内存(JVM):" + new DecimalFormat("#.#").format(maxMemorySize * 1.0 / 1024.0 / 1024.0) + "M");
+        BigDecimal bigDecimal = new BigDecimal(used / max * 100).setScale(2, BigDecimal.ROUND_HALF_UP);
+        System.err.println("占内存的大小比率:" +bigDecimal+"%");
+
+        return bigDecimal.doubleValue();
+    }
+
+    //单位转化为MB
+    private String formatMemory(long memory){
+        if (memory < 1024) {
+            return memory + "B";
+        } else if (memory < 1024 * 1024) {
+            return memory / 1024 + "KB";
+        } else if (memory < 1024 * 1024 * 1024) {
+            return memory / (1024 * 1024) + "MB";
+        } else {
+            return memory / (1024 * 1024 * 1024) + "GB";
+        }
+    }
+
+
 }

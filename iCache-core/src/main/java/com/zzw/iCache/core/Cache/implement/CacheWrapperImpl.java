@@ -53,7 +53,14 @@ public class CacheWrapperImpl<V> implements Cache<V> {
     }
 
     @Override
+    public Double calculateMemoryUsage(){
+        return realCache.calculateMemoryUsage();
+    }
+
+    @Override
     public String getName() {
         return realCache.getName();
     }
+
+
 }

@@ -36,8 +36,14 @@
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>com.zzw</groupId>
+            <artifactId>iCache-schedule-core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
 
-<!--        <dependency>-->
+        <!--        <dependency>-->
 <!--            <groupId>com.zzw</groupId>-->
 <!--            <artifactId>iCache-autoconfigure</artifactId>-->
 <!--            <version>24.04.02</version>-->

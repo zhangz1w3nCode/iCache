@@ -22,4 +22,6 @@ public interface RealCache<V>{
     long size();
 
     String getName();
+
+    Double calculateMemoryUsage();
 }

@@ -7,13 +7,13 @@ import com.zzw.iCache.core.RealCache.RealCache;
 import com.zzw.iCache.core.RealCache.valueWrapper.ValueWrapper;
 import com.zzw.iCache.monitor.CacheMonitor;
 import com.zzw.iCache.monitor.dto.CacheInfo;
+import com.zzw.iCache.schedule.core.maneger.SeaDogScheduleManager;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
 import org.springframework.stereotype.Component;
 
-import java.util.Collections;
-import java.util.Date;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -28,6 +28,8 @@ public class DubboMonitorImpl implements CacheMonitor {
     private CacheManager cacheManager;
 
     private static final String REFRESH_ALL = "refresh_all";
+
+
 
     /**
      * cacheName:定义缓存名称：比如商品缓存
@@ -93,6 +95,16 @@ public class DubboMonitorImpl implements CacheMonitor {
         return res;
     }
 
+    @Override
+    public Double calculateMemoryUsage(String cacheName) {
+        //去缓存管理器中获取
+        RealCache cache = cacheManager.getRealCache(cacheName);
+        if(cache==null){
+            return 0.0;
+        }
+        return cache.calculateMemoryUsage();
+    }
+
     /**
      * 查询被管理的所有缓存
      */
@@ -140,5 +152,24 @@ public class DubboMonitorImpl implements CacheMonitor {
                 System.out.println(e);
             }
         }
+    }
+
+    @Override
+    public Set<String> refreshNames(String cacheName) {
+        // 如果是 refresh_all，则调用所有的刷新器
+        Set<String> res = new HashSet<>();
+            Set<String> refreshNames = cacheManager.getRefreshNames(cacheName);
+            for (String name : refreshNames) {
+                try {
+                    cacheManager.refreshCache(cacheName, name);
+                } catch (Exception e) {
+                    //log.info("调用刷新器失败 cacheName:{}, refresh:{}", cacheName, name, e);
+                    System.out.println("调用刷新器失败"+"---"+cacheName+"---"+name);
+                    System.out.println(e);
+                }
+            }
+
+        return res;
+
     }
 }

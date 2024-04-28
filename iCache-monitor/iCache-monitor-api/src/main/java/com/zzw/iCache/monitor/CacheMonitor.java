@@ -33,4 +33,8 @@ public interface CacheMonitor {
 
 
     void refreshCache(String cacheName, String refreshName);
+
+    Double calculateMemoryUsage(String cacheName);
+
+    Set<String> refreshNames(String cacheName);
 }

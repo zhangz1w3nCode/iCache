@@ -16,4 +16,6 @@ public interface Cache<V>{
     List<ValueWrapper<V>> getValues();
 
     String getName();
+
+    Double calculateMemoryUsage();
 }
