@@ -2,7 +2,7 @@ package com.zzw.iCache.autoconfigure.properties;
 
 /**
  * 缓存调度配置类
- * @author qiaolin
+ * @author zhangyang
  * @version $Id:  SeaDogScheduleProperties.java,v 0.1 2020年06月06日 14:11 $Exp
  */
 public class SeaDogScheduleProperties {

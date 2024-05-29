@@ -19,7 +19,7 @@ import java.util.Map;
 /**
  * 动态绑定 schedule
  *
- * @author Clark
+ * @author zhangyang
  * @version $Id: SeaDogScheduleBinder.java,v 0.1 2020年06月08日 19:33 $Exp
  */
 public class SeaDogScheduleBinder {

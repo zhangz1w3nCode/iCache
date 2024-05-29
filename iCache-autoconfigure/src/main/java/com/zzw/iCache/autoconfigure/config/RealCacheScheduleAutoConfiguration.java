@@ -26,7 +26,7 @@ import java.util.concurrent.Executors;
 /**
  * 调度器配置类
  *
- * @author Clark
+ * @author zhangyang
  * @version $Id: SeaDogScheduleAutoConfiguration.java,v 0.1 2020年04月14日 16:26 $Exp
  */
 @Configuration

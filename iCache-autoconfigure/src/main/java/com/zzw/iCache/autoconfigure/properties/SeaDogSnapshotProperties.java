@@ -2,7 +2,7 @@ package com.zzw.iCache.autoconfigure.properties;
 
 /**
  * 缓存快照配置
- * @author qiaolin
+ * @author zhangyang
  * @version $Id:  SnapshotProperties.java,v 0.1 2020年07月29日 17:19 $Exp
  */
 public class SeaDogSnapshotProperties {

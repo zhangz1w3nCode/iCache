@@ -10,7 +10,7 @@ import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 /**
  * 速率执行 fixedRate 模式
  *
- * @author Clark
+ * @author zhangyang
  * @version $Id: SeaDogFixedRateTask.java,v 0.1 2020年06月15日 21:04 $Exp
  */
 public class SeaDogFixedRateTask implements SeaDogTask {

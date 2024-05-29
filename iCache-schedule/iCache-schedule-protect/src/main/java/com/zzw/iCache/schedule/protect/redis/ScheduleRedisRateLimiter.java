@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 基于redisoon，分布式令牌桶模式
  *
- * @author Clark
+ * @author zhangyang
  * @version $Id: ScheduleRedisRateLimiter.java,v 0.1 2020年06月22日 16:23 $Exp
  */
 public class ScheduleRedisRateLimiter implements ScheduleRateLimiter {

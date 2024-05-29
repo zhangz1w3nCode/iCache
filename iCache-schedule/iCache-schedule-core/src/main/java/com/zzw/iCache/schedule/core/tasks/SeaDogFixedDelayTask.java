@@ -10,7 +10,7 @@ import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 /**
  * 间隔时间执行 fixedDelay 模式
  *
- * @author Clark
+ * @author zhangyang
  * @version $Id: SeaDogFixedDelayTask.java,v 0.1 2020年06月15日 21:04 $Exp
  */
 public class SeaDogFixedDelayTask implements SeaDogTask {

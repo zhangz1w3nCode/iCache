@@ -6,7 +6,7 @@ import com.zzw.iCache.schedule.core.protect.ScheduleProjectConfig;
 /**
  * 缓存刷新-过载保护配置类
  *
- * @author Clark
+ * @author zhangyang
  * @version $Id: ScheduleProjectProperties.java,v 0.1 2020年06月23日 15:48 $Exp
  */
 

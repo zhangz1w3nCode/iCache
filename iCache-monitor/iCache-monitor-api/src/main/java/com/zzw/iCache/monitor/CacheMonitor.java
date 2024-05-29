@@ -2,6 +2,7 @@ package com.zzw.iCache.monitor;
 
 import java.util.Set;
 
+import com.github.benmanes.caffeine.cache.stats.CacheStats;
 
 
 
@@ -35,6 +36,7 @@ public interface CacheMonitor {
     void refreshCache(String cacheName, String refreshName);
 
     Double calculateMemoryUsage(String cacheName);
+    CacheStats getCacheStatus(String cacheName);
 
     Set<String> refreshNames(String cacheName);
 }

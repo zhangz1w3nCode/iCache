@@ -9,7 +9,7 @@ package com.zzw.iCache.core.CacheListener;
  *   {@link CachePutListener}
  *   {@link CacheRemoveListener}
  * </pre>
- * @author qiaolin
+ * @author zhangyang
  * @version $Id:  CacheChangeListener.java,v 0.1 2020年06月06日 11:16 $Exp
  */
 public interface CacheListener {

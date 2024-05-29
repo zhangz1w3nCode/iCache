@@ -10,7 +10,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 /**
  * Bean注册器
  * 将class全类名对应的bean加载到ioc容器中
- * @author qiaolin
+ * @author zhangyang
  * @version $Id:  BeanRegister.java,v 0.1 2020年06月20日 16:32 $Exp
  */
 public class BeanRegister {

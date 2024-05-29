@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 /**
  * dubbo 泛化调用工具类
  *
- * @author juchengcheng
+ * @author zhanyang
  * @version : DubboGeneralizeUtils.java,v 0.1 2019年11月09日 10:00
  */
 public final class DubboGeneralizeUtils {

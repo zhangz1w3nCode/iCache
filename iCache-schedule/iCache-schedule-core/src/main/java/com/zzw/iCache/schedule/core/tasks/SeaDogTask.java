@@ -7,7 +7,7 @@ import org.springframework.scheduling.config.ScheduledTask;
 import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 
 /**
- * @author Clark
+ * @author zhangyang
  * @version $Id: SeaDogTask.java,v 0.1 2020年06月15日 21:06 $Exp
  */
 public interface SeaDogTask {

@@ -5,7 +5,7 @@ import com.zzw.iCache.schedule.core.CacheRefreshConfig;
 /**
  * schedule 刷新配置
  *
- * @author qiaolin
+ * @author zhangyang
  * @version $Id:  SeaDogCacheRefreshProperties.java,v 0.1 2020年06月06日 14:07 $Exp
  */
 

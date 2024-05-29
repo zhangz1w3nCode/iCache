@@ -2,6 +2,7 @@ package com.zzw.iCache.core.RealCache.implement;
 
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
+import com.github.benmanes.caffeine.cache.stats.CacheStats;
 import com.zzw.iCache.core.CacheConfig.CacheConfig;
 import com.zzw.iCache.core.CacheConstant.CacheConstant;
 import com.zzw.iCache.core.RealCache.RealCache;
@@ -35,7 +36,7 @@ public class CaffeineCache<V> implements RealCache<V>, CacheConstant {
         this.name = cacheConfig.getName();
 
         //通过builder去构建一个原生的caffeine实例
-        Caffeine<Object, Object> builder = Caffeine.newBuilder();
+        Caffeine<Object, Object> builder = Caffeine.newBuilder().recordStats();
 
         //初始化缓存的容量
         if(cacheConfig.getInitialCapacity() > 0){
@@ -57,11 +58,18 @@ public class CaffeineCache<V> implements RealCache<V>, CacheConstant {
             builder.maximumSize(cacheConfig.getMaxSize());
         }
 
+        //builder.recordStats();
 
         //构建
         cache = builder.build();
 
-        System.out.println("成功构建一个CaffeineCache"+cacheConfig.toString());
+        CacheStats stats = cache.stats();
+//        long hitCount = stats.hitCount();
+//        long requestCount = stats.requestCount();
+//
+//        // 计算缓存命中率
+//        double hitRate = new BigDecimal(hitCount).divide(new BigDecimal(requestCount), 2, BigDecimal.ROUND_HALF_UP).doubleValue();
+//        System.out.println("CaffeineCache: " + name + " cache hit rate is :" + hitRate);
     }
 
     @Override
@@ -131,17 +139,9 @@ public class CaffeineCache<V> implements RealCache<V>, CacheConstant {
         return bigDecimal.doubleValue();
     }
 
-    //单位转化为MB
-    private String formatMemory(long memory){
-        if (memory < 1024) {
-            return memory + "B";
-        } else if (memory < 1024 * 1024) {
-            return memory / 1024 + "KB";
-        } else if (memory < 1024 * 1024 * 1024) {
-            return memory / (1024 * 1024) + "MB";
-        } else {
-            return memory / (1024 * 1024 * 1024) + "GB";
-        }
+    @Override
+    public CacheStats getCacheStatus(){
+        return cache.stats();
     }
 
 

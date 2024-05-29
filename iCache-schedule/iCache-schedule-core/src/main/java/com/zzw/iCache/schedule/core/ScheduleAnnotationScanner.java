@@ -14,7 +14,7 @@ import java.util.Map;
 /**
  * schedule 注解扫描类
  *
- * @author Clark
+ * @author zhangyang
  * @version $Id: ScheduleAnnotationScanner.java,v 0.1 2020年06月19日 10:31 $Exp
  */
 public class ScheduleAnnotationScanner {

@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * schedule 管理器
  *
- * @author Clark
+ * @author zhangyang
  * @version $Id: SeaDogScheduleManager.java,v 0.1 2020年06月08日 20:50 $Exp
  */
 public class SeaDogScheduleManager {

@@ -22,7 +22,7 @@ import java.util.Map;
  *
  * <p> 启动后默认给所有刷新器执行一次 </p>
  *
- * @author Clark
+ * @author zhangyang
  * @version $Id: SeaDogRefreshRunner.java,v 0.1 2020年07月17日 9:21 $Exp
  */
 @Component

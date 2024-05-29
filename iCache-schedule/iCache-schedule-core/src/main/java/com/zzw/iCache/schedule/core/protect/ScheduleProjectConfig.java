@@ -3,7 +3,7 @@ package com.zzw.iCache.schedule.core.protect;
 /**
  * 缓存刷新-过载保护配置类
  *
- * @author Clark
+ * @author zhangyang
  * @version $Id: ScheduleProjectConfig.java,v 0.1 2020年06月23日 15:48 $Exp
  */
 public class ScheduleProjectConfig {

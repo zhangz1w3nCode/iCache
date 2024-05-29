@@ -9,7 +9,7 @@ import java.lang.annotation.*;
  * <p> 1、支持随机模式 </p>
  * <p> 2、支持redis分布式令牌桶模式 </p>
  *
- * @author Clark
+ * @author zhangyang
  * @version $Id: SeaDogOverloadProtect.java,v 0.1 2020年06月18日 15:44 $Exp
  */
 @Documented

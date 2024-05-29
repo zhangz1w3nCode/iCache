@@ -5,7 +5,7 @@ import com.zzw.iCache.schedule.core.protect.ScheduleProjectConfig;
 /**
  * 缓存刷新配置类
  *
- * @author qiaolin
+ * @author zhangyang
  * @version $Id:  CacheRefreshConfig.java,v 0.1 2020年06月18日 11:13 $Exp
  */
 public class CacheRefreshConfig {

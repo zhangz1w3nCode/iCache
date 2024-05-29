@@ -23,7 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * <p> fixed delay </p>
  * <p> fixed rate </p>
  *
- * @author Clark
+ * @author zhangyang
  * @version $Id: SeaDogTaskFactory.java,v 0.1 2020年06月15日 21:44 $Exp
  */
 public class SeaDogTaskFactory {

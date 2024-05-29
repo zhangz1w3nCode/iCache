@@ -1,6 +1,7 @@
 package com.zzw.iCache.monitor.cacheMonitorImpl;
 
 import com.alibaba.fastjson.JSON;
+import com.github.benmanes.caffeine.cache.stats.CacheStats;
 import com.zzw.iCache.core.CacheConfig.CacheConfig;
 import com.zzw.iCache.core.CacheManager.CacheManager;
 import com.zzw.iCache.core.RealCache.RealCache;
@@ -103,6 +104,16 @@ public class DubboMonitorImpl implements CacheMonitor {
             return 0.0;
         }
         return cache.calculateMemoryUsage();
+    }
+
+    @Override
+    public CacheStats getCacheStatus(String cacheName) {
+        //去缓存管理器中获取
+        RealCache cache = cacheManager.getRealCache(cacheName);
+        if(cache==null){
+            return null;
+        }
+        return cache.getCacheStatus();
     }
 
     /**

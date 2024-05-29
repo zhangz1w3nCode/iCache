@@ -14,7 +14,7 @@ import java.util.Set;
 
 /**
  * 缓存管理类
- * @author qiaolin
+ * @author zhangyang
  * @version $Id:  CacheManager.java,v 0.1 2020年06月03日 16:06 $Exp
  */
 

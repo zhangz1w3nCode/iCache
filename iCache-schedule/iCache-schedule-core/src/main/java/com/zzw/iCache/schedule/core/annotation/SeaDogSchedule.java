@@ -6,7 +6,7 @@ import java.lang.annotation.*;
 /**
  * 通过注解方式绑定 schedule任务
  *
- * @author Clark
+ * @author zhangyang
  * @version $Id: SeaDogSchedule.java,v 0.1 2020年06月18日 15:13 $Exp
  */
 @Documented

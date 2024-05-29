@@ -1,5 +1,6 @@
 package com.zzw.iCache.core.RealCache;
 
+import com.github.benmanes.caffeine.cache.stats.CacheStats;
 import com.zzw.iCache.core.RealCache.valueWrapper.ValueWrapper;
 
 import java.util.List;
@@ -24,4 +25,6 @@ public interface RealCache<V>{
     String getName();
 
     Double calculateMemoryUsage();
+
+     CacheStats getCacheStatus();
 }

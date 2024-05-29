@@ -3,7 +3,7 @@ package com.zzw.iCache.schedule.core.constant;
 /**
  * schedule的一些常量
  *
- * @author Clark
+ * @author zhangyang
  * @version $Id: ScheduleConstant.java,v 0.1 2020年06月18日 16:23 $Exp
  */
 public class ScheduleConstant {

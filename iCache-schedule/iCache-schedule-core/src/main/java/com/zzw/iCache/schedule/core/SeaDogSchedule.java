@@ -5,7 +5,7 @@ import com.zzw.iCache.schedule.core.enums.SeaDogTaskType;
 /**
  * schedule注解实现类
  *
- * @author Clark
+ * @author zhangyang
  * @version $Id: SeaDogSchedule.java,v 0.1 2020年06月06日 14:22 $Exp
  */
 public class SeaDogSchedule {

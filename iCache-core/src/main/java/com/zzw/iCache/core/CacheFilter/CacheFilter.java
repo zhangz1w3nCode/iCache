@@ -28,7 +28,7 @@ import com.zzw.iCache.core.RealCache.valueWrapper.ValueWrapper;
  *         return filterChain.get(key);
  *     };
  * </pre>
- * @author qiaolin
+ * @author zhangyang
  * @version $Id:  CacheListener.java,v 0.1 2020年06月03日 17:25 $Exp
  */
 public interface CacheFilter<V> {

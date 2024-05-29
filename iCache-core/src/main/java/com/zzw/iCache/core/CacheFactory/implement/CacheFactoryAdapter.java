@@ -20,11 +20,6 @@ import java.util.ServiceLoader;
 
 public class CacheFactoryAdapter implements CacheFactory, CacheConstant {
 
-    public static void main(String[] args) {
-        CacheFactory cacheFactory = new CacheFactoryAdapter();
-        System.out.println(FACTORIES);
-    }
-
     public static final List<CacheFactory> FACTORIES = new ArrayList<>();
 
     static {

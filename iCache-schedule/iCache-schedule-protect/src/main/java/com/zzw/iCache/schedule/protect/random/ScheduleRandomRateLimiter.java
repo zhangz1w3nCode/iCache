@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 随机限流模式
  *
- * @author Clark
+ * @author zhangyang
  * @version $Id: ScheduleRandomRateLimiter.java,v 0.1 2020年06月22日 10:59 $Exp
  */
 public class ScheduleRandomRateLimiter implements ScheduleRateLimiter {

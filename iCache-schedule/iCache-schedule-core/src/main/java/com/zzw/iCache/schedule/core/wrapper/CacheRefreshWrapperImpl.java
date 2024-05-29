@@ -4,7 +4,7 @@ import com.zzw.iCache.core.Cache.Cache;
 import com.zzw.iCache.core.CacheRefresher.CacheRefresh;
 
 /**
- * @author qiaolin
+ * @author zhangyang
  * @version $Id:  CacheRefreshWrapperImpl.java,v 0.1 2020年06月09日 09:43 $Exp
  */
 public class CacheRefreshWrapperImpl implements CacheRefreshWrapper {

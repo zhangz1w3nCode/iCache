@@ -26,7 +26,7 @@ import java.util.Map;
 /**
  * 调度过载保护配置类
  *
- * @author Clark
+ * @author zhangyang
  * @version $Id: ScheduleProtectAutoConfiguration.java,v 0.1 2020年06月27日 9:58 $Exp
  */
 @ConditionalOnClass(ScheduleRandomRateLimiter.class)

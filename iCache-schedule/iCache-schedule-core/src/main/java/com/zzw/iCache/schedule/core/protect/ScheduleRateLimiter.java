@@ -3,7 +3,7 @@ package com.zzw.iCache.schedule.core.protect;
 /**
  * 定时调度限流接口
  *
- * @author Clark
+ * @author zhangyang
  * @version $Id: ScheduleRateLimiter.java,v 0.1 2020年06月18日 16:20 $Exp
  */
 public interface ScheduleRateLimiter {
